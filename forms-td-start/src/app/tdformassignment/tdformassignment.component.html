@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form class="form" (ngSubmit)="sub(localreference)" #localreference="ngForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input 
+            type="text" 
+            id="email" 
+            class="form-control"
+            [(ngModel)]="email"
+            name="email"
+            required>
+            <span class="form-error" *ngIf="!localreference.controls.email?.valid && localreference.controls.email?.touched">Invalid email</span>
+          </div>
+        <div class="form-group">
+          <label for="secret">Subscriptions</label>
+          <select 
+          id="subscriptions" 
+          class="form-control"
+          [ngModel]="subscriptions"
+          name="subscriptions">
+            <option value="Basic">Basic</option>
+            <option value="Advanced">Advanced</option>
+            <option value="Pro">Pro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="pswd">Password</label>
+          <input 
+            type="password" 
+            id="pswd" 
+            class="form-control"
+            [(ngModel)]="password"
+            name="pswd"
+            required>
+        </div>
+        <div class="form-group">
+          <button class="submit" type="submit">Submit</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

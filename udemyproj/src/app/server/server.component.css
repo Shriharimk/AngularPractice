@@ -1,0 +1,21 @@
+strong{
+   font-weight: bold;
+}
+i{
+  color:green
+}
+.add-server{
+  background-color: lightblue;
+}
+.add-server:hover{
+  background-color: rgb(118, 254, 254);
+}
+.add-server:active{
+  background-color: rgb(0, 247, 255);
+}
+.online{
+  color: white;
+}
+.white-font{
+  color: white;
+}

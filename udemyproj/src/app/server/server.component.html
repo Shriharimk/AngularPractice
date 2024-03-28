@@ -1,0 +1,54 @@
+<!--<p>Enter username</p>
+<input type="text" [(ngModel)]="userName">
+<button type="reset" [disabled]="!userName" (click)="userName='' ">Reset</button>-->
+
+<!--<h2><p>Hello {{userName}},</p></h2><br>
+<p [ngClass]="{online: serverStatus=='online'}" [ngStyle]="{backgroundColor: getColor()}">Server is {{getServerStatus()}}</p>-->
+<!--<p [ngClass]="{online: serverStatus=='online'}" [ngStyle]="{backgroundColor: getColor()}">Server is {{getServerStatus()}}</p>
+
+
+<label>Input serverName</label><br>
+<input type="text" (input)="updateServerName($event)"><br>
+<label>Input serverName ngModel</label><br>
+<input type="text" [(ngModel)]="serverName"><br>
+<button 
+  class="add-server" 
+  [disabled]="!allowAddServer"
+  (click)="onClickAddServer()"
+>Add Server</button>
+
+<p *ngIf="addServer">Server was created. Server name is {{serverName}} </p>
+<app-server *ngFor="let server of servers"></app-server>-->
+
+<!--Assignment section 2 2nd-->
+<label>Server name</label>
+<input 
+type="text"
+[(ngModel)]="serverName">
+<button
+[disabled]="!allowAddServer"
+(click)="onClickAddServer()">Submit</button>
+<p [ngClass]="{online: serverStatus=='online'}" [ngStyle]="{backgroundColor: getColor()}">Server is {{getServerStatus()}}</p>
+<p *ngIf="addServer">Server was created, name is: {{serverName}}</p>
+<button (click)="onToggle()" >Display Details</button>
+<p [hidden]="!showStatus">Secret Password</p>
+<div *ngFor="let counter of log; let i=index" 
+[ngStyle]="{backgroundColor:i > 5? 'blue':'transparent',}"
+[ngClass]="{'white-font':i>5}">{{counter}} </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
